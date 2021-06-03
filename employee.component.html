@@ -1,0 +1,23 @@
+<div class="container">
+    <h1 style="margin-top: 50px; text-align: center; font-size: x-large;color: white;margin-top:10px "> Employee Data</h1>
+    <input (input)="searchEmployee()" type="search" [(ngModel)]="firstname" class="form-control" placeholder="search..." style="margin-top: 30px;">
+    {{firstname}}
+    <table class="table table-bordered table-hover" style="text-align: center;font-size: x-large; color: white; margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employee">
+                <td>{{emp.e_id}}</td>
+                <td>{{emp.first_name}}</td>
+                <td>{{emp.last_name}}</td>
+                <td>{{emp.salary}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
